@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sackett Electrical Service — Morgantown, WV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F5EFDC;
+    --paper-card: #EDE3C4;
+    --ink: #211C15;
+    --ink-soft: #4A4335;
+    --copper: #A6401F;
+    --copper-deep: #7E2E15;
+    --amber: #D98F2B;
+    --line: #C7BB93;
+    --line-soft: #DCD3B2;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:none;
+    margin:0;
+    letter-spacing:0.01em;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  /* ---- background: faint ledger lines ---- */
+  .ledger{
+    background-image:repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 38px,
+      var(--line-soft) 39px
+    );
+  }
+
+  /* ---- header ---- */
+  header{
+    padding:22px 0 0;
+    border-bottom:2px solid var(--ink);
+  }
+  .header-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding-bottom:14px;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    font-family:'Oswald', sans-serif;
+    font-size:1.5rem;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .brand span{color:var(--copper);}
+  .header-phone{
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--copper-deep);
+    text-decoration:none;
+    border-bottom:1.5px solid var(--copper-deep);
+    padding-bottom:2px;
+  }
+
+  /* ---- hero ---- */
+  .hero{
+    padding:56px 0 60px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:44px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:2.9rem;
+    line-height:1.08;
+    font-weight:600;
+  }
+  .hero-sub{
+    margin-top:18px;
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn-primary{
+    display:inline-block;
+    background:var(--copper);
+    color:var(--paper);
+    text-decoration:none;
+    font-family:'Oswald', sans-serif;
+    font-size:1.02rem;
+    font-weight:500;
+    padding:14px 26px;
+    border-radius:2px;
+    transition:background 0.15s ease;
+  }
+  .btn-primary:hover{background:var(--copper-deep);}
+  .btn-primary:focus-visible{outline:3px solid var(--amber); outline-offset:2px;}
+  .hero-meta{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---- ticket stub ---- */
+  .ticket{
+    background:var(--paper-card);
+    border:1.5px solid var(--ink);
+    padding:22px 24px 26px;
+    position:relative;
+    transform:rotate(1.4deg);
+    box-shadow:5px 5px 0 rgba(33,28,21,0.12);
+    animation:settle 0.7s ease-out;
+  }
+  @keyframes settle{
+    from{opacity:0; transform:rotate(5deg) translateY(-10px);}
+    to{opacity:1; transform:rotate(1.4deg) translateY(0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticket{animation:none;}
+  }
+  .ticket-head{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1.5px dashed var(--line);
+    padding-bottom:10px;
+    margin-bottom:14px;
+    font-family:'Oswald', sans-serif;
+    font-size:0.82rem;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+  }
+  .ticket-field{margin-bottom:10px; font-size:0.92rem;}
+  .ticket-field b{
+    display:block;
+    font-family:'Oswald', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    font-weight:500;
+    margin-bottom:2px;
+  }
+  .stamp{
+    position:absolute;
+    right:-8px;
+    top:52%;
+    border:3px solid var(--copper);
+    color:var(--copper);
+    border-radius:50%;
+    width:88px;
+    height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'Oswald', sans-serif;
+    font-size:0.78rem;
+    font-weight:600;
+    line-height:1.15;
+    transform:rotate(-14deg);
+    opacity:0.9;
+  }
+
+  /* ---- section label ---- */
+  .section{
+    padding:52px 0;
+    border-top:2px solid var(--ink);
+  }
+  .section-label{
+    font-family:'Oswald', sans-serif;
+    font-size:0.8rem;
+    letter-spacing:0.08em;
+    color:var(--copper);
+    margin-bottom:8px;
+  }
+  .section h2{
+    font-size:1.9rem;
+    font-weight:600;
+    max-width:26ch;
+  }
+  .section-intro{
+    margin-top:12px;
+    color:var(--ink-soft);
+    max-width:56ch;
+  }
+
+  /* ---- services list ---- */
+  .services{
+    margin-top:32px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-top:1.5px solid var(--line);
+  }
+  .service-row{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    padding:15px 0;
+    border-bottom:1.5px solid var(--line);
+  }
+  .service-row:nth-child(odd){padding-right:20px;}
+  .service-row:nth-child(even){padding-left:20px;}
+  .check{
+    flex:none;
+    width:18px;
+    height:18px;
+    border:1.5px solid var(--copper);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.7rem;
+    color:var(--copper);
+    font-weight:700;
+    margin-top:2px;
+  }
+  .service-name{font-weight:500;}
+
+  /* ---- reviews ---- */
+  .reviews{
+    margin-top:32px;
+    display:grid;
+    gap:22px;
+  }
+  .review{
+    border-left:3px solid var(--copper);
+    padding:4px 0 4px 20px;
+  }
+  .review p{margin:0; font-size:1.02rem; color:var(--ink);}
+  .review-attr{
+    margin-top:8px;
+    font-size:0.84rem;
+    color:var(--ink-soft);
+    font-family:'Oswald', sans-serif;
+    letter-spacing:0.02em;
+  }
+  .rating-line{
+    margin-top:26px;
+    font-family:'Oswald', sans-serif;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .rating-line b{color:var(--ink);}
+
+  /* ---- contact / footer ---- */
+  .contact-block{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .contact-card{
+    background:var(--paper-card);
+    border:1.5px solid var(--ink);
+    padding:24px;
+  }
+  .contact-card h3{font-size:1.15rem; font-weight:600; margin-bottom:10px;}
+  .contact-card p{margin:0 0 6px; color:var(--ink-soft); font-size:0.95rem;}
+  .contact-card .btn-primary{margin-top:14px;}
+  footer{
+    padding:26px 0 40px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    border-top:2px solid var(--ink);
+    margin-top:10px;
+  }
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr; gap:32px; padding:40px 0 44px;}
+    .hero h1{font-size:2.2rem;}
+    .services{grid-template-columns:1fr;}
+    .service-row:nth-child(odd){padding-right:0;}
+    .service-row:nth-child(even){padding-left:0;}
+    .contact-block{grid-template-columns:1fr;}
+    .ticket{transform:rotate(0.6deg);}
+    .stamp{width:74px; height:74px; font-size:0.68rem; right:2px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">Sackett <span>Electrical</span> Service</div>
+    <a class="header-phone" href="tel:+13042168008">304-216-8008</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div>
+    <h1>Electrical work done right, explained the whole way through.</h1>
+    <p class="hero-sub">Serving Morgantown, WV and the surrounding area — panel upgrades, EV chargers, troubleshooting, and repairs from an electrician who shows up, explains the job, and stands behind it.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+13042168008">Call 304-216-8008</a>
+      <span class="hero-meta">Free estimates · 15+ years experience</span>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <div class="stamp">4.5★<br>RATED</div>
+    <div class="ticket-head">
+      <span>Service Ticket</span>
+      <span>Morgantown, WV</span>
+    </div>
+    <div class="ticket-field">
+      <b>Company</b>
+      Sackett Electrical Service LLC
+    </div>
+    <div class="ticket-field">
+      <b>Job type</b>
+      Residential &amp; light commercial electrical
+    </div>
+    <div class="ticket-field">
+      <b>Experience</b>
+      15+ years in the trade
+    </div>
+    <div class="ticket-field">
+      <b>Status</b>
+      Scheduling now
+    </div>
+  </div>
+</section>
+
+<section class="section ledger wrap" id="services" style="border-top:2px solid var(--ink);">
+  <div class="section-label">Services</div>
+  <h2>Whatever it is, chances are it's on this list.</h2>
+  <p class="section-intro">From a single outlet to a full panel upgrade — if it plugs in, switches on, or runs through the wall, it's covered.</p>
+
+  <div class="services">
+    <div class="service-row"><span class="check">✓</span><span class="service-name">Panel upgrades &amp; replacements</span></div>
+    <div class="service-row"><span class="check">✓</span><span class="service-name">EV charger installation</span></div>
+    <div class="service-row"><span class="check">✓</span><span class="service-name">Troubleshooting &amp; repairs</span></div>
+    <div class="service-row"><span class="check">✓</span><span class="service-name">Outlet &amp; fixture installation</span></div>
+    <div class="service-row"><span class="check">✓</span><span class="service-name">Home rewiring</span></div>
+    <div class="service-row"><span class="check">✓</span><span class="service-name">Hot tub &amp; outdoor power hookups</span></div>
+  </div>
+</section>
+
+<section class="section wrap" id="reviews">
+  <div class="section-label">What people say</div>
+  <h2>Customers who've had Dakota out to the house</h2>
+
+  <div class="reviews">
+    <div class="review">
+      <p>Customers describe Dakota as easy to reach and clear about what he's doing and why — the kind of contractor you keep calling back.</p>
+      <div class="review-attr">Google review</div>
+    </div>
+    <div class="review">
+      <p>Praised for a smooth EV charger install after 15 years in the trade, with fair pricing and a trip to source parts wholesale to keep costs down.</p>
+      <div class="review-attr">Google review</div>
+    </div>
+    <div class="review">
+      <p>Called out for fast response on a free estimate and flexible scheduling around a customer's own timeline.</p>
+      <div class="review-attr">Google review</div>
+    </div>
+  </div>
+
+  <p class="rating-line"><b>4.5 out of 5</b> average rating from 28 Google reviews.</p>
+</section>
+
+<section class="section wrap" id="contact" style="border-bottom:2px solid var(--ink);">
+  <div class="section-label">Get in touch</div>
+  <h2>Ready when you are.</h2>
+
+  <div class="contact-block">
+    <div class="contact-card">
+      <h3>Call or text</h3>
+      <p>Fastest way to reach Dakota directly.</p>
+      <p>304-216-8008</p>
+      <a class="btn-primary" href="tel:+13042168008">Call now</a>
+    </div>
+    <div class="contact-card">
+      <h3>Service area</h3>
+      <p>Morgantown, WV and surrounding Monongalia County.</p>
+      <p>Free estimates on most jobs.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  Sackett Electrical Service LLC — Morgantown, WV — Sample page, built as a mockup.
+</footer>
+
+</body>
+</html>

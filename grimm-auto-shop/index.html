@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grimm Auto Shop — Connellsville, PA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #EFE7D8;
+    --panel: #E4D9C2;
+    --ink: #1E1D1B;
+    --ink-soft: #4B4640;
+    --steel: #495057;
+    --rust: #A6291E;
+    --rust-deep: #7C1E15;
+    --hazard: #E3A63A;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Bebas Neue', sans-serif;
+    font-weight:400;
+    letter-spacing:0.02em;
+    margin:0;
+    color:var(--ink);
+  }
+  .wrap{max-width:940px; margin:0 auto; padding:0 28px;}
+
+  /* header */
+  header{
+    background:var(--ink);
+    color:var(--cream);
+    padding:18px 0;
+  }
+  .header-row{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:10px;
+  }
+  .brand{font-family:'Bebas Neue', sans-serif; font-size:1.7rem; letter-spacing:0.03em;}
+  .brand span{color:var(--hazard);}
+  .header-phone{
+    color:var(--cream); text-decoration:none; font-weight:600;
+    border:1.5px solid var(--hazard); padding:8px 16px; font-size:0.92rem;
+  }
+  .header-phone:hover{background:var(--hazard); color:var(--ink);}
+
+  /* hazard divider */
+  .hazard-bar{
+    height:10px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--hazard) 0 18px,
+      var(--ink) 18px 36px
+    );
+  }
+
+  /* hero */
+  .hero{
+    padding:52px 0 56px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{font-size:2.7rem; line-height:1.05;}
+  .hero-sub{
+    margin-top:16px; font-size:1.05rem; color:var(--ink-soft); max-width:44ch;
+  }
+  .hero-actions{margin-top:26px; display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn-primary{
+    display:inline-block; background:var(--rust); color:var(--cream);
+    text-decoration:none; font-family:'Bebas Neue', sans-serif; font-size:1.15rem;
+    letter-spacing:0.03em; padding:13px 26px; border-radius:2px;
+    transition:background 0.15s ease;
+  }
+  .btn-primary:hover{background:var(--rust-deep);}
+  .btn-primary:focus-visible{outline:3px solid var(--hazard); outline-offset:2px;}
+  .hero-meta{font-size:0.9rem; color:var(--ink-soft);}
+
+  /* inspection sticker */
+  .sticker{
+    width:270px; height:270px; border-radius:50%;
+    background:var(--cream);
+    border:4px solid var(--ink);
+    margin:0 auto;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    animation:spin-in 0.6s ease-out;
+  }
+  @keyframes spin-in{
+    from{opacity:0; transform:rotate(-8deg) scale(0.92);}
+    to{opacity:1; transform:rotate(0) scale(1);}
+  }
+  @media (prefers-reduced-motion: reduce){ .sticker{animation:none;} }
+  .sticker-inner{
+    width:230px; height:230px; border-radius:50%;
+    border:1.5px dashed var(--steel);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:14px;
+  }
+  .sticker-title{
+    font-family:'Bebas Neue', sans-serif; color:var(--rust);
+    font-size:1.05rem; letter-spacing:0.05em; margin-bottom:8px;
+  }
+  .sticker-field{font-size:0.78rem; color:var(--ink-soft); margin-bottom:3px;}
+  .sticker-field b{color:var(--ink); font-weight:600;}
+  .sticker-rating{
+    margin-top:8px; font-family:'Bebas Neue', sans-serif; font-size:1.3rem; color:var(--ink);
+  }
+
+  /* section */
+  .section{padding:50px 0; border-top:3px solid var(--ink);}
+  .section-label{
+    font-family:'Bebas Neue', sans-serif; font-size:1rem; letter-spacing:0.06em; color:var(--rust); margin-bottom:6px;
+  }
+  .section h2{font-size:1.9rem; max-width:26ch;}
+  .section-intro{margin-top:12px; color:var(--ink-soft); max-width:56ch;}
+
+  /* services */
+  .services{
+    margin-top:30px; display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;
+  }
+  .service-card{
+    background:var(--panel); border:1.5px solid var(--ink);
+    padding:18px 16px;
+  }
+  .service-card .num{
+    font-family:'Bebas Neue', sans-serif; color:var(--rust); font-size:1.6rem; display:block; margin-bottom:6px;
+  }
+  .service-card .name{font-weight:500; font-size:0.98rem;}
+
+  /* trust */
+  .trust{
+    margin-top:34px; display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+    background:var(--ink); color:var(--cream); padding:26px 28px;
+  }
+  .trust-num{font-family:'Bebas Neue', sans-serif; font-size:2.6rem; color:var(--hazard); line-height:1;}
+  .trust-text{font-size:0.96rem; max-width:42ch; color:#D8D0BF;}
+
+  /* contact */
+  .contact-block{margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .contact-card{background:var(--panel); border:1.5px solid var(--ink); padding:22px 24px;}
+  .contact-card h3{font-size:1.2rem; margin-bottom:10px; font-family:'Bebas Neue', sans-serif; letter-spacing:0.02em;}
+  .contact-card p{margin:0 0 6px; color:var(--ink-soft); font-size:0.95rem;}
+  .contact-card .btn-primary{margin-top:12px;}
+
+  footer{
+    padding:24px 0 40px; font-size:0.85rem; color:var(--ink-soft);
+    border-top:3px solid var(--ink); margin-top:6px;
+  }
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr; gap:30px; padding:38px 0 40px;}
+    .hero h1{font-size:2.1rem;}
+    .services{grid-template-columns:1fr 1fr;}
+    .contact-block{grid-template-columns:1fr;}
+    .sticker{width:220px; height:220px;}
+    .sticker-inner{width:186px; height:186px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">Grimm <span>Auto Shop</span></div>
+    <a class="header-phone" href="tel:+17246283736">724-628-3736</a>
+  </div>
+</header>
+<div class="hazard-bar" role="presentation"></div>
+
+<section class="hero wrap">
+  <div>
+    <h1>Straight answers, honest work, done right the first time.</h1>
+    <p class="hero-sub">Full-service auto repair in Connellsville, PA — oil changes, brakes, diagnostics, and state inspections from a shop that tells you what actually needs fixed.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+17246283736">Call 724-628-3736</a>
+      <span class="hero-meta">Walk-ins welcome</span>
+    </div>
+  </div>
+
+  <div class="sticker">
+    <div class="sticker-inner">
+      <div class="sticker-title">Grimm Auto Shop</div>
+      <div class="sticker-field"><b>Location</b> Connellsville, PA</div>
+      <div class="sticker-field"><b>Services</b> Repair &amp; maintenance</div>
+      <div class="sticker-field"><b>Inspections</b> PA state certified</div>
+      <div class="sticker-rating">4.9 ★</div>
+      <div class="sticker-field">10 Google reviews</div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="services">
+  <div class="section-label">Services</div>
+  <h2>Everything under the hood, and everything that isn't.</h2>
+  <p class="section-intro">From routine maintenance to the stuff that makes the check-engine light come on.</p>
+
+  <div class="services">
+    <div class="service-card"><span class="num">01</span><span class="name">Oil changes &amp; maintenance</span></div>
+    <div class="service-card"><span class="num">02</span><span class="name">Brakes &amp; suspension</span></div>
+    <div class="service-card"><span class="num">03</span><span class="name">Check engine &amp; diagnostics</span></div>
+    <div class="service-card"><span class="num">04</span><span class="name">Tune-ups</span></div>
+    <div class="service-card"><span class="num">05</span><span class="name">PA state inspections</span></div>
+    <div class="service-card"><span class="num">06</span><span class="name">Tires &amp; alignments</span></div>
+  </div>
+
+  <div class="trust">
+    <div class="trust-num">4.9★</div>
+    <div class="trust-text">Average rating from 10 Google reviews — from customers across Connellsville and the surrounding area.</div>
+  </div>
+</section>
+
+<section class="section wrap" id="contact">
+  <div class="section-label">Get in touch</div>
+  <h2>Bring it in, we'll take a look.</h2>
+
+  <div class="contact-block">
+    <div class="contact-card">
+      <h3>Call the shop</h3>
+      <p>Fastest way to get a straight answer.</p>
+      <p>724-628-3736</p>
+      <a class="btn-primary" href="tel:+17246283736">Call now</a>
+    </div>
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>For questions or to schedule ahead.</p>
+      <p><a href="mailto:goldieg@zoominternet.net" style="color:var(--rust); font-weight:600;">goldieg@zoominternet.net</a></p>
+      <p>Connellsville, PA</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  Grimm Auto Shop — Connellsville, PA — Sample page, built as a mockup.
+</footer>
+
+</body>
+</html>
